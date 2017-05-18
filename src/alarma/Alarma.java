@@ -19,7 +19,12 @@ public class Alarma {
     /**
      * @param args the command line arguments
      */
+   
     public static void main(String[] args) {
+        Relojo r = new Relojo();
+        r.setVisible(true);
+    }
+         /**
         // para usar en el menu
         Scanner input = new Scanner(System.in);
         // para usar en el while del menu
@@ -41,6 +46,7 @@ public class Alarma {
                     System.out.println("ALARMA!!!");
                     // si el tiempo actual es diferente que la alarma imprimo la hora
                 } else {
+                    String hora = LocalTime.now().getHour() + ":" + LocalTime.now().getMinute() + ":" + LocalTime.now().getSecond();
                     System.out.println(LocalTime.now().getHour() + ":" + LocalTime.now().getMinute() + ":" + LocalTime.now().getSecond());
                 }
             }
@@ -67,4 +73,5 @@ public class Alarma {
         // para todas las tareas del timer
         timer.cancel();
     }
+    * **/
 }
